@@ -2,7 +2,7 @@ FROM azul/zulu-openjdk-alpine:11 AS jlink
 
 RUN $JAVA_HOME/bin/jlink --compress=2 --module-path /opt/java/openjdk/jmods --add-modules java.base,java.compiler,java.datatransfer,jdk.crypto.ec,java.desktop,java.instrument,java.logging,java.management,java.naming,java.rmi,java.scripting,java.security.sasl,java.sql,java.transaction.xa,java.xml,jdk.unsupported --output /jlinked
 
-FROM alpine:3.11
+FROM node:13-alpine
 
 MAINTAINER Jeremy Long <jeremy.long@owasp.org>
 
