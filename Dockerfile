@@ -6,7 +6,7 @@ FROM mcr.microsoft.com/dotnet/core/runtime:2.2-alpine3.9
 
 MAINTAINER Jeremy Long <jeremy.long@owasp.org>
 
-ARG VERSION=5.3.2
+ENV VERSION=5.3.2
 ARG POSTGRES_DRIVER_VERSION=42.2.6
 ARG MYSQL_DRIVER_VERSION=8.0.17
 
