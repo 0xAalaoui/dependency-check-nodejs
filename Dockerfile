@@ -22,7 +22,7 @@ RUN wget https://dl.bintray.com/jeremy-long/owasp/dependency-check-${VERSION}-re
 RUN apk update                                                                                       && \
     apk add --no-cache --virtual .build-deps curl tar                                                && \
     apk add --no-cache ruby ruby-rdoc                                                                && \
-    apk add --no-cache npm                                                                           && \
+    apk add --no-cache npm yarn                                                                      && \
     gem install bundle-audit                                                                         && \
     bundle audit update                                                                              && \
     unzip dependency-check-${VERSION}-release.zip -d /usr/share/                                     && \
